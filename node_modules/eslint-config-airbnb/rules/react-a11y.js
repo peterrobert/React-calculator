@@ -17,7 +17,7 @@ module.exports = {
 
     // Require ARIA roles to be valid and non-abstract
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md
-    'jsx-a11y/aria-role': ['error', { ignoreNonDom: false }],
+    'jsx-a11y/aria-role': ['error', { ignoreNonDOM: false }],
 
     // Enforce all aria-* props are valid.
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-props.md
@@ -180,7 +180,8 @@ module.exports = {
 
     // ensure emoji are accessible
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/accessible-emoji.md
-    'jsx-a11y/accessible-emoji': 'error',
+    // disabled; rule is deprecated
+    'jsx-a11y/accessible-emoji': 'off',
 
     // elements with aria-activedescendant must be tabbable
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-activedescendant-has-tabindex.md
@@ -235,6 +236,12 @@ module.exports = {
       components: ['Link'],
       specialLink: ['to'],
       aspects: ['noHref', 'invalidHref', 'preferButton'],
+    }],
+
+    // Ensure the autocomplete attribute is correct and suitable for the form field it is used with
+    // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/29c68596b15c4ff0a40daae6d4a2670e36e37d35/docs/rules/autocomplete-valid.md
+    'jsx-a11y/autocomplete-valid': ['off', {
+      inputComponents: [],
     }],
   },
 };
