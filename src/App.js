@@ -1,4 +1,4 @@
-/* eslint-disable no-multiple-empty-lines no-trailing-spaces*/
+/* eslint-disable no-multiple-empty-lines no-trailing-spaces */
 import './App.css';
 
 
