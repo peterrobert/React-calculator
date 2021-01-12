@@ -1,75 +1,73 @@
 const Group1 = [
   {
-    name: 'AC',
+    name: "AC",
   },
   {
-    name: '+/-',
+    name: "+/-",
   },
   {
-    name: '%',
+    name: "%",
   },
   {
-    name: '÷',
+    name: "÷",
   },
 ];
 
 const Group2 = [
   {
-    name: '7',
+    name: "7",
   },
   {
-    name: '8',
+    name: "8",
   },
   {
-    name: '9',
+    name: "9",
   },
   {
-    name: 'X',
+    name: "X",
   },
 ];
 
 const Group3 = [
   {
-    name: '4',
+    name: "4",
   },
   {
-    name: '5',
+    name: "5",
   },
   {
-    name: '6',
+    name: "6",
   },
   {
-    name: '-',
+    name: "-",
   },
 ];
 
 const Group4 = [
   {
-    name: '1',
+    name: "1",
   },
   {
-    name: '2',
+    name: "2",
   },
   {
-    name: '3',
+    name: "3",
   },
   {
-    name: '+',
+    name: "+",
   },
 ];
 
 const Group5 = [
   {
-    name: '0',
+    name: "0",
   },
   {
-    name: '.',
+    name: ".",
   },
   {
-    name: '=',
+    name: "=",
   },
 ];
 
-export {
-  Group1, Group2, Group3, Group4, Group5,
-};
+export { Group1, Group2, Group3, Group4, Group5 };

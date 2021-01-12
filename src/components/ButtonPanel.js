@@ -1,14 +1,12 @@
 /* eslint-disable import/prefer-default-export */
-import { React } from 'react';
-import { Button } from './Button';
-import {
-  Group1, Group2, Group3, Group4, Group5,
-} from '../buttonsArray';
+import { React } from "react";
+import { Button } from "./Button";
+import { Group1, Group2, Group3, Group4, Group5 } from "../buttonsArray";
 
-export function ButtonPanel() {
-  function displayButtons(data) {
+export const ButtonPanel = () => {
+  const displayButtons = (data) => {
     return <Button name={data.name} />;
-  }
+  };
 
   const groupOneButtons = Group1.map(displayButtons);
   const groupTwoButtons = Group2.map(displayButtons);
@@ -25,4 +23,4 @@ export function ButtonPanel() {
       <div>{groupFiveButtons}</div>
     </div>
   );
-}
+};
