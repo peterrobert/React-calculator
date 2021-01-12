@@ -1,8 +1,8 @@
 import { React } from "react";
 
-export function Button (){
+export function Button (props){
     return(
-        <h1>This is the button component</h1>
+        <button>{props.name}</button>
     )
 }
 
