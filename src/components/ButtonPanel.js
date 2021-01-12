@@ -1,6 +1,9 @@
-import { React } from "react";
-import { Button } from "./Button";
-import { Group1,Group2,Group3,Group4,Group5 } from "../buttonsArray";
+/* eslint-disable import/prefer-default-export */
+import { React } from 'react';
+import { Button } from './Button';
+import {
+  Group1, Group2, Group3, Group4, Group5,
+} from '../buttonsArray';
 
 export function ButtonPanel() {
   function displayButtons(data) {

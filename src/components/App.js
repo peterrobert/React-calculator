@@ -4,10 +4,10 @@ import { Display } from './Display';
 import { ButtonPanel } from './ButtonPanel';
 
 function App() {
-  let calculate = "0"
+  const calculate = '0';
   return (
     <>
-      <Display calculations = {calculate} />
+      <Display calculations={calculate} />
       <ButtonPanel />
     </>
   );

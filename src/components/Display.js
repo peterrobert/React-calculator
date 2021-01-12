@@ -1,3 +1,7 @@
+/* eslint-disable import/prefer-default-export, react/prop-types */
 import { React } from 'react';
 
-export const Display = () => <h1>This is the display area</h1>;
+export function Display(props) {
+  const { calculations } = props;
+  return <h1>{calculations}</h1>;
+}
