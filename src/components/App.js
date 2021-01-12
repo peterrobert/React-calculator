@@ -3,7 +3,7 @@ import '../App.css';
 import { Display } from './Display';
 import { ButtonPanel } from './ButtonPanel';
 
-function App() {
+const App = () => {
   const calculate = '0';
   return (
     <>
@@ -11,6 +11,7 @@ function App() {
       <ButtonPanel />
     </>
   );
+
 }
 
 export default App;
