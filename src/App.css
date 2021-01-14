@@ -20,9 +20,10 @@
 .app_component {
   width: 700px;
 }
+
 .btn_component {
   height: 100px;
-  color: #000000;
+  color: #000;
   font-weight: bold;
   border: 1px solid rgb(187, 184, 184);
   font-size: 40px;
