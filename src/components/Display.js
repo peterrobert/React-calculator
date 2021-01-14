@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 export const Display = props => {
   const { calculations } = props;
 
-  return (<h1>{calculations}</h1>);
+  return (
+    <div className="display_component">
+      <h1>{calculations}</h1>
+    </div>
+  );
 };
 
 Display.defaultProps = {

@@ -14,7 +14,7 @@ export const ButtonPanel = () => {
   const groupFiveButtons = Group5.map(displayButtons);
 
   return (
-    <div>
+    <div className="button_panel">
       <div>{groupOneButtons}</div>
       <div>{groupTwoButtons}</div>
       <div>{groupThreeButtons}</div>

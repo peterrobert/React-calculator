@@ -1,1 +1,21 @@
-/* stylelint-disable no-empty-source */
+.button_panel{
+   
+}
+
+.display_component{
+  background-color: grey;
+  height: 100px;
+  color: #fff;
+  font-weight: bold;
+  text-align: right;
+
+}
+
+.grouprow{
+    height: 100px;
+}
+
+.app_component{
+    display: flex;
+    width: 700px;
+}
