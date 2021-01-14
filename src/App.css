@@ -18,12 +18,7 @@
 }
 
 .app_component {
-  /* display: flex; */
   width: 700px;
-}
-
-.button_panel {
-  /* height: 100px; */
 }
 .btn_component {
   height: 100px;
