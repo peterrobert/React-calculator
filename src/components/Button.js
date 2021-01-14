@@ -1,15 +1,14 @@
-import { React } from "react";
-import PropTypes from "prop-types";
+import { React } from 'react';
+import PropTypes from 'prop-types';
 
-export const Button = (props) => {
+export const Button = props => {
   const { name, color, wide } = props;
 
-  console.log(wide);
   return (
     <button
       type="button"
       style={{
-        width: wide == false ? "25%" : "50%",
+        width: wide === false ? '25%' : '50%',
         backgroundColor: color,
       }}
       className="btn_component"
@@ -21,4 +20,6 @@ export const Button = (props) => {
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  wide: PropTypes.string.isRequired,
 };

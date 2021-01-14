@@ -1,21 +1,23 @@
-import { React } from "react";
-import { Button } from "./Button";
-import { Group1, Group2, Group3, Group4, Group5 } from "../buttonsArray";
+import { React } from 'react';
+import { Button } from './Button';
+import {
+  Group1, Group2, Group3, Group4, Group5,
+} from '../buttonsArray';
 
 export const ButtonPanel = () => {
-  const displayButtons = (data) => {
-    let check = data.name;
+  const displayButtons = data => {
+    const check = data.name;
 
     let setColor;
 
     if (
-      check === "÷" ||
-      check === "X" ||
-      check === "-" ||
-      check === "+" ||
-      check === "="
+      check === '÷'
+      || check === 'X'
+      || check === '-'
+      || check === '+'
+      || check === '='
     ) {
-      setColor = "#f45d0f";
+      setColor = '#f45d0f';
     }
 
     return (
@@ -23,7 +25,7 @@ export const ButtonPanel = () => {
         key={data.id}
         name={data.name}
         color={setColor}
-        wide={data.name === "0" ? true : false}
+        wide={data.name === '0'}
       />
     );
   };

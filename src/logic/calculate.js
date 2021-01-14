@@ -1,9 +1,10 @@
-import { operate } from "./operate";
+/* eslint-disable no-unused-vars */
+import { operate } from './operate';
 
-const calculate = (calculator, button) => {
- const {total, next, operation} = calculator;
+export const calculate = (calculator, button) => {
+  let { total, next, operation } = calculator;
 
- if (button === '+/-') {
+  if (button === '+/-') {
     total *= -1;
     next = 0;
     operation = null;
@@ -28,7 +29,4 @@ const calculate = (calculator, button) => {
   next = 0;
   operation = null;
   return calculator;
-
-}
-
-export default calculate;
+};
