@@ -2,16 +2,18 @@ import { React } from "react";
 import PropTypes from "prop-types";
 
 export const Button = (props) => {
-  const { name } = props;
-  const allButtons = {
-    width : '25%'
-  }
+  const { name, color, wide } = props;
 
-  const zeroButton = {
-    width: '50%'
-  }
+  console.log(wide);
   return (
-    <button type="button" style = { name == '0'? zeroButton: allButtons } className="btn_component">
+    <button
+      type="button"
+      style={{
+        width: wide == false ? "25%" : "50%",
+        backgroundColor: color,
+      }}
+      className="btn_component"
+    >
       {name}
     </button>
   );
