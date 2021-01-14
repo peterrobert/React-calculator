@@ -26,10 +26,10 @@
   /* height: 100px; */
 }
 .btn_component {
-  width: 25%;
   height: 100px;
   color: #000000;
   font-weight: bold;
   border: 1px solid rgb(187, 184, 184);
   font-size: 25px;
+ 
 }
