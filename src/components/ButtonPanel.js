@@ -5,7 +5,7 @@ import {
 } from '../buttonsArray';
 
 export const ButtonPanel = () => {
-  const displayButtons = data => <Button name={data.name} />;
+  const displayButtons = data => <Button key={data.id} name={data.name} />;
 
   const groupOneButtons = Group1.map(displayButtons);
   const groupTwoButtons = Group2.map(displayButtons);

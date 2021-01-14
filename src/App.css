@@ -1,21 +1,35 @@
-.button_panel{
-   
-}
-
-.display_component{
+.display_component {
   background-color: grey;
   height: 100px;
   color: #fff;
   font-weight: bold;
   text-align: right;
-
+  padding-right: 10px;
 }
 
-.grouprow{
-    height: 100px;
+.display_component h1 {
+  font-size: 50px;
+  position: relative;
+  top: 40px;
 }
 
-.app_component{
-    display: flex;
-    width: 700px;
+.grouprow {
+  height: 100px;
+}
+
+.app_component {
+  /* display: flex; */
+  width: 700px;
+}
+
+.button_panel {
+  /* height: 100px; */
+}
+.btn_component {
+  width: 25%;
+  height: 100px;
+  color: #000000;
+  font-weight: bold;
+  border: 1px solid rgb(187, 184, 184);
+  font-size: 25px;
 }
