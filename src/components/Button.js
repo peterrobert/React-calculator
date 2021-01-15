@@ -18,8 +18,13 @@ export const Button = props => {
   );
 };
 
+Button.defaultProps = {
+  wide: false,
+  color: '',
+};
+
 Button.propTypes = {
   name: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
-  wide: PropTypes.string.isRequired,
+  color: PropTypes.string,
+  wide: PropTypes.bool,
 };
