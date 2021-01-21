@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import { operate } from './operate';
 
 export const calculate = (data, button) => {
