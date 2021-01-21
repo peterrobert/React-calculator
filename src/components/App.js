@@ -8,7 +8,7 @@ class App extends React.Component{
   constructor(){
     super();
 
-    let state = {
+   state = {
       total: null,
       next: null,
       operation: null
@@ -31,7 +31,7 @@ class App extends React.Component{
   render(){
     return(
       <div className="app_component">
-      <Display />
+      <Display total ={this.state.total} next = {this.state.next}/>
       <ButtonPanel />
     </div>
     )
