@@ -1,31 +1,31 @@
 import { operate } from './operate';
 
-export const calculate = (dataObj, btnName) => {
-  const { total, next, operation } = dataObj;
+export const calculate = (data, button) => {
+  const { total, next, operation } = data;
 
-  const operationSyms = ['+', '-', 'X', '÷', '%'];
+  const oper = ['+', '-', 'X', '÷', '%'];
   const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-  if (operationSyms.includes(btnName) && next && total) {
+  if (oper.includes(button) && next && total) {
     return {
       total: operate(total, next, operation).toString(),
-      operation: btnName,
+      operation: button,
       next: null,
     };
   }
 
-  if (operationSyms.includes(btnName) && !next && total) {
+  if (oper.includes(button) && !next && total) {
     return {
       total,
-      operation: btnName,
+      operation: button,
       next,
     };
   }
 
-  if (operationSyms.includes(btnName) && next && !total) {
+  if (oper.includes(button) && next && !total) {
     return {
       total: next,
-      operation: btnName,
+      operation: button,
       next: null,
     };
   }
@@ -38,15 +38,15 @@ export const calculate = (dataObj, btnName) => {
     };
   }
 
-  if (numbers.includes(btnName)) {
+  if (numbers.includes(button)) {
     return {
       total,
-      next: next ? `${next}${btnName}` : `${btnName}`,
+      next: next ? `${next}${button}` : `${button}`,
       operation,
     };
   }
 
-  if (btnName === '+/-' && !next && total && total !== 'ERROR') {
+  if (button === '+/-' && !next && total && total !== 'ERROR') {
     return {
       total: (total * -1).toString(),
       next,
@@ -54,7 +54,7 @@ export const calculate = (dataObj, btnName) => {
     };
   }
 
-  if (btnName === '+/-' && next && total !== 'ERROR') {
+  if (button === '+/-' && next && total !== 'ERROR') {
     return {
       total,
       next: (next * -1).toString(),
@@ -62,7 +62,7 @@ export const calculate = (dataObj, btnName) => {
     };
   }
 
-  if (btnName === 'AC') {
+  if (button === 'AC') {
     return {
       total: null,
       next: null,
@@ -70,7 +70,7 @@ export const calculate = (dataObj, btnName) => {
     };
   }
 
-  if (btnName === '=') {
+  if (button === '=') {
     return {
       total: operate(total, next, operation),
       next: null,
@@ -78,7 +78,7 @@ export const calculate = (dataObj, btnName) => {
     };
   }
 
-  if (btnName === '.') {
+  if (button === '.') {
     if (!next) {
       return {
         total,
