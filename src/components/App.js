@@ -32,7 +32,7 @@ class App extends React.Component{
     return(
       <div className="app_component">
       <Display total ={this.state.total} next = {this.state.next}/>
-      <ButtonPanel />
+      <ButtonPanel clickHandler= {this.handleClick}/>
     </div>
     )
   }
