@@ -2,7 +2,6 @@ import { React } from 'react';
 import PropTypes from 'prop-types';
 
 export const Display = props => {
-  let data;
   const { calculations,total,next } = props;
 
   return (
