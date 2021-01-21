@@ -4,6 +4,11 @@ import PropTypes from 'prop-types';
 export const Button = props => {
   const { name, color, wide } = props;
 
+  
+  const handleClick = (buttonName) => {
+     return  props.clickHandler(buttonName)
+  }
+
   return (
     <button
       type="button"
@@ -12,6 +17,7 @@ export const Button = props => {
         backgroundColor: color,
       }}
       className="btn_component"
+      onClick = {() => {handleClick(name)}}
     >
       {name}
     </button>

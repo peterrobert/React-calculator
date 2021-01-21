@@ -4,12 +4,15 @@ import {
   Group1, Group2, Group3, Group4, Group5,
 } from '../buttonsArray';
 
-export const ButtonPanel = () => {
+export const ButtonPanel = (props) => {
+ 
+  const handleClick = (buttonName) => {
+    return props.clickHandler(buttonName)
+  }
+
   const displayButtons = data => {
     const check = data.name;
-
     let setColor;
-
     if (
       check === '÷'
       || check === 'X'
@@ -19,13 +22,13 @@ export const ButtonPanel = () => {
     ) {
       setColor = '#f45d0f';
     }
-
     return (
       <Button
         key={data.id}
         name={data.name}
         color={setColor}
         wide={data.name === '0'}
+        clickHandler = {handleClick}
       />
     );
   };

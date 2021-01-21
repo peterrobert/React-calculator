@@ -5,10 +5,10 @@ import { ButtonPanel } from './ButtonPanel';
 import { calculate } from '../logic/calculate';
 
 class App extends React.Component{
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
 
-   state = {
+   this.state = {
       total: null,
       next: null,
       operation: null
@@ -18,12 +18,8 @@ class App extends React.Component{
   }
 
   handleClick(buttonName){
-
-    this.setState((prevState) => {
-
-      return calculate(prevState, buttonName);
-
-    })
+   
+    this.setState(prevState => calculate(prevState, buttonName));
 
   }
 
