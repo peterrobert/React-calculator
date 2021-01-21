@@ -25,9 +25,11 @@ export const operate = (numberOne, numeberTwo, operation) => {
     return result;
   }
 
-  if (operation === '=') {
-    result = first.Div(second);
-    return result;
+  if (operation === '%') {
+    result = first.plus(second);
+    const perc = result.div(100);
+
+    return perc;
   }
 
   return result;
