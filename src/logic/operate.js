@@ -31,4 +31,3 @@ export const operate = (numberOne, numberTwo, operation) => {
 
   return data.toString();
 };
-
