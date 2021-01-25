@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import Big from 'big.js';
 
 export const operate = (numberOne, numberTwo, operation) => {
@@ -31,4 +32,3 @@ export const operate = (numberOne, numberTwo, operation) => {
 
   return data.toString();
 };
-

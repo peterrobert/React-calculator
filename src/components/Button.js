@@ -1,13 +1,11 @@
+/* eslint-disable import/prefer-default-export */
 import { React } from 'react';
 import PropTypes from 'prop-types';
 
 export const Button = props => {
   const { name, color, wide } = props;
 
-  
-  const handleClick = (buttonName) => {
-     return  props.clickHandler(buttonName)
-  }
+  const handleClick = buttonName => props.clickHandler(buttonName);
 
   return (
     <button
@@ -17,7 +15,7 @@ export const Button = props => {
         backgroundColor: color,
       }}
       className="btn_component"
-      onClick = {() => {handleClick(name)}}
+      onClick={() => { handleClick(name); }}
     >
       {name}
     </button>
@@ -28,4 +26,5 @@ Button.propTypes = {
   name: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   wide: PropTypes.string.isRequired,
+  clickHandler: PropTypes.func.isRequired,
 };

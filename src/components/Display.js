@@ -1,14 +1,17 @@
+/* eslint-disable import/prefer-default-export */
 import { React } from 'react';
 import PropTypes from 'prop-types';
 
 export const Display = props => {
-  const { calculations,total,next } = props;
+  const { calculations, total, next } = props;
 
   return (
     <div className="display_component">
-      <h1>{
-      total || next !== null? total || next : calculations
-      }</h1>
+      <h1>
+        {
+      total || next !== null ? total || next : calculations
+      }
+      </h1>
     </div>
   );
 };
@@ -19,4 +22,6 @@ Display.defaultProps = {
 
 Display.propTypes = {
   calculations: PropTypes.string,
+  total: PropTypes.string.isRequired,
+  next: PropTypes.string.isRequired,
 };

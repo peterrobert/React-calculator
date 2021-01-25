@@ -1,14 +1,13 @@
+/* eslint-disable import/prefer-default-export */
 import { React } from 'react';
+import PropTypes from 'prop-types';
 import { Button } from './Button';
 import {
   Group1, Group2, Group3, Group4, Group5,
 } from '../buttonsArray';
 
-export const ButtonPanel = (props) => {
- 
-  const handleClick = (buttonName) => {
-    return props.clickHandler(buttonName)
-  }
+export const ButtonPanel = props => {
+  const handleClick = buttonName => props.clickHandler(buttonName);
 
   const displayButtons = data => {
     const check = data.name;
@@ -28,7 +27,7 @@ export const ButtonPanel = (props) => {
         name={data.name}
         color={setColor}
         wide={data.name === '0'}
-        clickHandler = {handleClick}
+        clickHandler={handleClick}
       />
     );
   };
@@ -48,4 +47,8 @@ export const ButtonPanel = (props) => {
       <div>{groupFiveButtons}</div>
     </div>
   );
+};
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
 };
