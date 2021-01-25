@@ -3,7 +3,7 @@
 > The aim of this project is to create a calculator app using react. Am going to implement react state, props, components and react styling.
 
 
-![screenshot](screenshot-1.png)
+![screenshot](calculator.jpg)
 
 
 ## Built With
