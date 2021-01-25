@@ -3,6 +3,9 @@
 > The aim of this project is to create a calculator app using react. Am going to implement react state, props, components and react styling.
 
 
+![screenshot](calculator.jpg)
+
+
 ## Built With
 
 - Javascript ES6
@@ -17,13 +20,17 @@
 
 - Install Node in your system. To install Node, you can read the [Documentation](https://nodejs.org/en/download/package-manager/)
 - Clone or download the zip file into your machine. CD into the folder and run
+
     ``` 
    npm install
 
     ``` 
 - This will install all the dependancies.
 
-### `npm start`
+  ``` 
+  npm start
+
+   ``` 
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

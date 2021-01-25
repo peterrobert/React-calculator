@@ -1,32 +1,32 @@
 /* eslint-disable import/prefer-default-export */
 import { operate } from './operate';
 
-export const calculate = (data, button) => {
-  const { total, next, operation } = data;
+export const calculate = (dataObj, btnName) => {
+  const { total, next, operation } = dataObj;
 
-  const oper = ['+', '-', 'X', '÷', '%'];
+  const operationSyms = ['+', '-', 'X', '÷', '%'];
   const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-  if (oper.includes(button) && next && total) {
+  if (operationSyms.includes(btnName) && next && total) {
     return {
       total: operate(total, next, operation).toString(),
-      operation: button,
+      operation: btnName,
       next: null,
     };
   }
 
-  if (oper.includes(button) && !next && total) {
+  if (operationSyms.includes(btnName) && !next && total) {
     return {
       total,
-      operation: button,
+      operation: btnName,
       next,
     };
   }
 
-  if (oper.includes(button) && next && !total) {
+  if (operationSyms.includes(btnName) && next && !total) {
     return {
       total: next,
-      operation: button,
+      operation: btnName,
       next: null,
     };
   }
@@ -39,15 +39,15 @@ export const calculate = (data, button) => {
     };
   }
 
-  if (numbers.includes(button)) {
+  if (numbers.includes(btnName)) {
     return {
       total,
-      next: next ? `${next}${button}` : `${button}`,
+      next: next ? `${next}${btnName}` : `${btnName}`,
       operation,
     };
   }
 
-  if (button === '+/-' && !next && total && total !== 'ERROR') {
+  if (btnName === '+/-' && !next && total && total !== 'ERROR') {
     return {
       total: (total * -1).toString(),
       next,
@@ -55,7 +55,7 @@ export const calculate = (data, button) => {
     };
   }
 
-  if (button === '+/-' && next && total !== 'ERROR') {
+  if (btnName === '+/-' && next && total !== 'ERROR') {
     return {
       total,
       next: (next * -1).toString(),
@@ -63,7 +63,7 @@ export const calculate = (data, button) => {
     };
   }
 
-  if (button === 'AC') {
+  if (btnName === 'AC') {
     return {
       total: null,
       next: null,
@@ -71,7 +71,7 @@ export const calculate = (data, button) => {
     };
   }
 
-  if (button === '=') {
+  if (btnName === '=') {
     return {
       total: operate(total, next, operation),
       next: null,
@@ -79,7 +79,7 @@ export const calculate = (data, button) => {
     };
   }
 
-  if (button === '.') {
+  if (btnName === '.') {
     if (!next) {
       return {
         total,

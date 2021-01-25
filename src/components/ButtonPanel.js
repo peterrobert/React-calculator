@@ -1,16 +1,17 @@
 /* eslint-disable import/prefer-default-export */
 import { React } from 'react';
+import PropTypes from 'prop-types';
 import { Button } from './Button';
 import {
   Group1, Group2, Group3, Group4, Group5,
 } from '../buttonsArray';
 
-export const ButtonPanel = () => {
+export const ButtonPanel = props => {
+  const handleClick = buttonName => props.clickHandler(buttonName);
+
   const displayButtons = data => {
     const check = data.name;
-
     let setColor;
-
     if (
       check === '÷'
       || check === 'X'
@@ -20,13 +21,13 @@ export const ButtonPanel = () => {
     ) {
       setColor = '#f45d0f';
     }
-
     return (
       <Button
         key={data.id}
         name={data.name}
         color={setColor}
         wide={data.name === '0'}
+        clickHandler={handleClick}
       />
     );
   };
@@ -46,4 +47,8 @@ export const ButtonPanel = () => {
       <div>{groupFiveButtons}</div>
     </div>
   );
+};
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
 };
