@@ -3,7 +3,7 @@ import Big from 'big.js';
 
 export const operate = (numberOne, numberTwo, operation) => {
   let data = 0;
-  const num1 = Big(numberOne || '0');
+  let num1 = Big(numberOne || '0');
   const num2 = Big(numberTwo || '0');
 
   switch (operation) {
@@ -24,7 +24,7 @@ export const operate = (numberOne, numberTwo, operation) => {
       data = num1.minus(num2);
       break;
     case '%':
-      data = num1.times(Big(0.01));
+      num1 = (num1 *= 0.01).toString();
       break;
     default:
       break;
