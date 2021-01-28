@@ -1,42 +1,50 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import Quote from "./quote";
 
 class Quotes extends Component {
+  state = {
+    quotes: [],
+    randomQuotes:[],
+  };
 
-    state = { 
+  componentDidMount() {
+    fetch("https://type.fit/api/quotes")
+      .then((Response) => Response.json())
+      .then((data) => {
+          this.setState({quotes: data})
+      })  
+  }
 
-        quotes:[],
-
-     }
-
-     componentDidMount() {
-
-        fetch('https://type.fit/api/quotes')
-        .then(Response => Response.json())
-        .then((data) => {
-            this.setState({quotes: data})
-        })
-
-     }
-
-     handleClick = () => {
-        const {quotes} = this.state
-        let random = Math.floor((Math.random() * quotes.length));
+  handleClick = () => {
+        let random = Math.floor(Math.random() * this.state.quotes.length);
         function filterFunc(data, index) {
-            if (index === random){
-                return data
-           }
-        } 
-      let filtered =  quotes.filter(filterFunc);    
-     }
+          if (index === random) {
+            return data;
+          }
+        }
+        let filtered = this.state.quotes.filter(filterFunc);
+        this.setState({ randomQuotes: filtered });
+  };
 
-    render() { 
-        console.log(this.state.quotes)
-        return ( 
-            <div className="app_component container">
-             <button  onClick = {this.handleClick} className ="btn btn-secondary m-2 btn-sm get-quote">get Quotes</button>
-            </div>
-         );
-    }
+  render() {
+    let [arr] = this.state.randomQuotes;
+    return (
+      <div className="app_component container">
+        {this.state.randomQuotes.length > 0 ? (
+          <Quote name={arr.author} message={arr.text} />
+        ) : (
+          <Quote name={" none"} message={"no quote at the moment"} />
+        )}
+
+        <button
+          onClick={this.handleClick}
+          className="btn btn-secondary m-2 btn-sm get-quote"
+        >
+          get Quotes
+        </button>
+      </div>
+    );
+  }
 }
- 
+
 export default Quotes;

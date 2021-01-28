@@ -46,3 +46,8 @@
   text-transform: uppercase;
   height: 55px;
 }
+
+cite{
+  padding-left:10px !important;
+  color: rgb(244, 93, 15);
+}
