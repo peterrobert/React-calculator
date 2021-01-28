@@ -27,6 +27,7 @@ class Quotes extends Component {
   };
 
   render() {
+      
     let [arr] = this.state.randomQuotes;
     return (
       <div className="app_component container">
