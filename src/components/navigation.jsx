@@ -1,10 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
     <React.Fragment>
       <nav className="navbar navbar-expand-lg navbar-light bg-light topstyle">
-
         <button
           className="navbar-toggler"
           type="button"
@@ -18,15 +18,15 @@ function Navigation() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <a className="nav-item nav-link" href="#">
-              Home 
-            </a>
-            <a className="nav-item nav-link" href="#">
-             Calculator
-            </a>
-            <a className="nav-item nav-link" href="#">
-              Quotes
-            </a>
+            <Link className="nav-item nav-link" to="/">
+              Home
+            </Link>
+            <Link className="nav-item nav-link" to="/calculator">
+              calculator
+            </Link>
+            <Link className="nav-item nav-link" to="/quotes">
+              quotes
+            </Link>
           </div>
         </div>
       </nav>

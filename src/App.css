@@ -40,3 +40,9 @@
   text-transform: uppercase;
  
 }
+
+.get-quote{
+  width: 150px;
+  text-transform: uppercase;
+  height: 55px;
+}
