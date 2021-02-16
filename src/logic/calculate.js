@@ -98,3 +98,5 @@ export const calculate = (dataObj, btnName) => {
 
   return [total, next, operation];
 };
+
+export default calculate
