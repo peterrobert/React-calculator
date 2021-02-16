@@ -65,9 +65,9 @@ describe('Calculate', () => {
         let ans = calculate( dataObj, '+')
 
         expect(ans).toEqual({
-            'total': '',
-            'operation': '',
-            'next': ''
+            total: 'ERROR',
+            operation: '+',
+            next:null
         })
         
     }); 
