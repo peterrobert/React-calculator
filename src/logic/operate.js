@@ -33,4 +33,4 @@ export const operate = (numberOne, numberTwo, operation) => {
   return data.toString();
 };
 
-export default operate
+export default operate;
