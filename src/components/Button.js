@@ -29,7 +29,7 @@ Button.defaultProps = {
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
-  wide: PropTypes.string.isRequired,
+  color: PropTypes.string,
+  wide: PropTypes.string,
   clickHandler: PropTypes.func.isRequired,
 };

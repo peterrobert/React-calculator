@@ -29,3 +29,24 @@
   font-size: 40px;
   font-family: 'Passion One', cursive;
 }
+
+.topstyle {
+  margin-bottom: 40px;
+}
+
+.topstyle a {
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.get-quote {
+  width: 150px;
+  text-transform: uppercase;
+  height: 55px;
+}
+
+cite {
+  padding-left: 10px !important;
+  color: rgb(244, 93, 15);
+}
